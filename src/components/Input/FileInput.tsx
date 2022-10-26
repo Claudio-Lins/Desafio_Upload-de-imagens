@@ -97,7 +97,7 @@ const FileInputBase: ForwardRefRenderFunction<
           setProgress(Math.round((e.loaded * 100) / e.total));
         },
         cancelToken: source.token,
-      } as AxiosRequestConfig;
+      } as unknown as AxiosRequestConfig;
 
       try {
         const response = await api.post(
